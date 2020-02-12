@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal"
+            android:layout_height="match_parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+        <EditText
+                android:id="@+id/fieldMobileNum"
+                android:hint="Enter mobile number"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="20dp"
+                android:inputType="number"
+                android:layout_height="wrap_content"/>
+
+        <EditText
+                android:id="@+id/fieldMessage"
+                android:hint="Enter your message"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="20dp"
+                android:layout_height="wrap_content"/>
+
+        <EditText
+                android:id="@+id/fieldSenderId"
+                android:hint="Enter sender id Ex: TESTIN"
+                android:maxLength="6"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="20dp"
+                android:layout_height="wrap_content"/>
+
+        <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SEND SMS"/>
+
+        <Switch
+                android:id="@+id/switch_route"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Select route" />
+
+        <TextView
+                android:id="@+id/tv_route"
+                tools:text="Selected route: 1"
+                android:textStyle="italic|bold"
+                android:textSize="20sp"
+                android:textColor="@android:color/holo_red_light"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="route=1 for promotional, route=4 for transactional"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
